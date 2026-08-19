@@ -4,6 +4,8 @@ A minimal Firefox extension that replaces the new tab page with Arini's
 founding-day counter and links through to the control plane. This is the
 Firefox port of the Chrome/Brave "Arini Companion" extension. Manifest V3.
 
+![The new tab page: a large "Day" counter with a fractional day and week number, on a dark surface.](screenshot.png)
+
 ## What it does
 
 - Overrides the new tab page with a live counter: the day number (plus a
