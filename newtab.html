@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>New Tab</title>
+    <link rel="stylesheet" href="newtab.css" />
+  </head>
+  <body>
+    <a class="counter" href="https://ari.ni" aria-label="Open the Arini control plane">
+      <img class="logo" src="icons/icon-128.png" alt="" />
+      <div class="day" aria-hidden="true">
+        <span class="day-label">Day</span>
+        <span class="day-count" id="days">&mdash;</span>
+        <span class="day-fraction" id="fraction">.000000</span>
+      </div>
+      <div class="week" aria-hidden="true">
+        Week <span class="week-count" id="week">&mdash;</span>
+      </div>
+      <span class="sr-only" id="announce">Counting days since Arini was founded.</span>
+    </a>
+    <script src="newtab.js"></script>
+  </body>
+</html>

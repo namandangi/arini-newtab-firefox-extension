@@ -1,0 +1,91 @@
+/* Palette and type mirror control-plane's app.css so the tab and the
+   dashboard read as one surface. */
+:root {
+  --surface-0: #0d1117;
+  --fg: #ffffff;
+  --fg-muted: rgba(255, 255, 255, 0.4);
+  --fg-fraction: rgba(255, 255, 255, 0.45);
+  --accent: #3b82f6;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--surface-0);
+  color: var(--fg);
+  color-scheme: dark;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Helvetica Neue",
+    sans-serif;
+}
+
+/* The whole page is the link — a new tab has no other affordance to aim at. */
+.counter {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.day {
+  display: flex;
+  align-items: baseline;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  /* Tabular figures stop the width jitter a ticking counter would otherwise
+     have, which would shift the whole line on every frame. */
+  font-variant-numeric: tabular-nums;
+}
+
+.day-label,
+.day-count {
+  font-size: clamp(3.5rem, 11vw, 6rem);
+  line-height: 1;
+}
+
+.day-label {
+  margin-right: 1rem;
+  font-weight: 500;
+  color: var(--fg-muted);
+}
+
+.day-fraction {
+  font-size: clamp(1.25rem, 3.5vw, 1.875rem);
+  color: var(--fg-fraction);
+}
+
+.week {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  color: var(--fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.week-count {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
